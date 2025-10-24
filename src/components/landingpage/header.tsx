@@ -20,16 +20,16 @@ export default function Header() {
                 </div>
 
                 <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-                    <button onClick={() => scrollToSection("benefits")} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                    <button onClick={() => scrollToSection("benefits")} className="text-gray-700 hover:text-blue-600 transition-colors font-medium cursor-pointer">
                         Benefícios
                     </button>
-                    <button onClick={() => scrollToSection("testimonials")} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                    <button onClick={() => scrollToSection("testimonials")} className="text-gray-700 hover:text-blue-600 transition-colors font-medium cursor-pointer">
                         Depoimentos
                     </button>
-                    <button onClick={() => scrollToSection("contact")} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                    <button onClick={() => scrollToSection("contact")} className="text-gray-700 hover:text-blue-600 transition-colors font-medium cursor-pointer">
                         Contato
                     </button>
-                    <button onClick={() => scrollToSection("cta")} className="bg-blue-600 p-2 px-4 rounded-[10px] hover:bg-blue-700 text-white font-semibold">
+                    <button onClick={() => scrollToSection("cta")} className="bg-blue-600 p-2 px-4 rounded-[10px] hover:bg-blue-700 text-white font-semibold cursor-pointer">
                         Agendar Agora
                     </button>
                 </nav>
