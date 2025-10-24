@@ -1,7 +1,7 @@
 import { FaArrowRight, FaWhatsapp } from "react-icons/fa"
 import { GoZap } from "react-icons/go"
 
-export default function HeroSection() {
+export default function Hero() {
     return (
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-amber-50">
             <div className="max-w-7xl mx-auto">

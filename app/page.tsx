@@ -2,6 +2,7 @@ import Header from '../src/components/landingpage/header'
 import Footer from '../src/components/landingpage/footer'
 import Hero from '../src/components/landingpage/hero'
 import Benefits from '../src/components/landingpage/benefits'
+import Testimonials from '@/src/components/landingpage/testimonials';
 
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
             <Header/>
                 <Hero/>
                 <Benefits/>
+                <Testimonials/>
             <Footer/>
         </div>
     );
