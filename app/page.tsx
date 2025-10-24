@@ -3,6 +3,7 @@ import Footer from '../src/components/landingpage/footer'
 import Hero from '../src/components/landingpage/hero'
 import Benefits from '../src/components/landingpage/benefits'
 import Testimonials from '@/src/components/landingpage/testimonials';
+import Cta from '@/src/components/landingpage/cta';
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
                 <Hero/>
                 <Benefits/>
                 <Testimonials/>
+                <Cta/>
             <Footer/>
         </div>
     );
