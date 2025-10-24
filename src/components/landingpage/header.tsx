@@ -1,9 +1,7 @@
 'use client'
 import { useState } from "react"
-import Image from "next/image"
 import { IoMdMenu, IoIosClose } from "react-icons/io"
 
-import logo from '../_imgs/logo.png'
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -18,9 +16,6 @@ export default function Header() {
         <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-2 flex-shrink-0">
-                    <div className="w-10 h-10  rounded-lg flex items-center justify-center">
-                        <Image src={logo} alt="Logo"/>
-                    </div>
                     <span className="text-xl font-bold text-gray-900">EASY</span>
                 </div>
 
