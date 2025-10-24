@@ -13,7 +13,7 @@ export default function Header() {
     }
 
     return (
-        <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+        <header className="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-2 flex-shrink-0">
                     <span className="text-xl font-bold text-gray-900">EASY</span>
@@ -29,7 +29,7 @@ export default function Header() {
                     <button onClick={() => scrollToSection("contact")} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                         Contato
                     </button>
-                    <button onClick={() => scrollToSection("cta")} className="bg-blue-600 p-2 rounded-[10px] hover:bg-blue-700 text-white font-semibold">
+                    <button onClick={() => scrollToSection("cta")} className="bg-blue-600 p-2 px-4 rounded-[10px] hover:bg-blue-700 text-white font-semibold">
                         Agendar Agora
                     </button>
                 </nav>
