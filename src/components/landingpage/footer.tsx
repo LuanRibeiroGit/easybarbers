@@ -13,10 +13,7 @@ export default function Footer() {
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
                     <div>
                         <div className="flex items-center gap-2 mb-4">
-                            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold text-lg">✂️</span>
-                            </div>
-                            <span className="text-xl font-bold text-white">Easy Barbers</span>
+                            <span className="text-xl font-bold text-white">EASY BARBERS</span>
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             A solução completa para agendamento e gestão de barbearias.
