@@ -23,12 +23,18 @@ export default function Hero() {
                             barbearia.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
-                            <button className="bg-blue-600 hover:bg-blue-700 text-white text-base sm:text-lg px-5 py-3 rounded-[10px] h-auto flex items-center justify-center sm:justify-start gap-2 font-semibold cursor-pointer">
+                            <button
+                                className="text-white text-base sm:text-lg px-5 py-3 rounded-[10px] h-auto flex items-center justify-center sm:justify-start gap-2 font-semibold cursor-pointer shadow-lg
+                                transition-all duration-[1500ms] ease-in-out bg-gradient-to-br from-[#3B82F6] via-[#2859a8] to-[#4278cf] bg-[length:200%_200%] free hover:bg-right hover:shadow-[0_0_20px_#60A5FA]
+                                ">
                                 Começar Teste Grátis <FaArrowRight className="w-3 h-3" />
                             </button>
-                            <button className="text-base sm:text-lg px-5 py-3 rounded-[10px] h-auto border-2 border-gray-300 hover:border-blue-600 font-semibold cursor-pointer">
-                                Agendar Demonstação
-                            </button>
+                            <div className="relative flex justify-center items-center">
+                                <div className="absolute bg-black w-[105%] bg-gray-300 h-[65px] animate-pulse rounded-[10px]"></div>
+                                <button className="relative bg-white text-base sm:text-lg px-5 py-3 rounded-[10px] h-auto border-2 border-gray-300 hover:border-blue-600 font-semibold cursor-pointer">
+                                    Agendar Demonstação
+                                </button>
+                            </div>
                         </div>
 
                         <div className="flex items-start gap-6 sm:gap-8 pt-8 border-t border-gray-200">
