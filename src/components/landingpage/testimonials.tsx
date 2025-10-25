@@ -104,11 +104,11 @@ export default function Testimonials() {
 
                     <div className="mt-12 sm:mt-16 grid sm:grid-cols-3 gap-6 sm:gap-8">
                         <div className="text-center">
-                            <p className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">500+</p>
+                            <p className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">600+</p>
                             <p className="text-gray-700 font-medium">Barbearias Satisfeitas</p>
                         </div>
                         <div className="text-center">
-                            <p className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">50K+</p>
+                            <p className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">10K+</p>
                             <p className="text-gray-700 font-medium">Agendamentos por Mês</p>
                         </div>
                         <div className="text-center">
