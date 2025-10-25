@@ -10,7 +10,7 @@ import hand from '../../_imgs/hand.png'
 
 export default function Hero() {
     return (
-        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-amber-50">
+        <section id="hero" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-amber-50">
             <div className="max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div className="space-y-6">

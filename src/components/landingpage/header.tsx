@@ -15,23 +15,23 @@ export default function Header() {
     return (
         <header className="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-                <div className="flex items-center gap-2 flex-shrink-0">
+                <a href="#hero" className="flex items-center gap-2 flex-shrink-0">
                     <span className="text-xl font-bold text-gray-900">EASY BARBERS</span>
-                </div>
+                </a>
 
                 <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-                    <button onClick={() => scrollToSection("benefits")} className="text-gray-700 hover:text-blue-600 transition-colors font-medium cursor-pointer">
+                    <a href="#benefits" className="text-gray-700 hover:text-blue-600 transition-colors font-medium cursor-pointer">
                         Benefícios
-                    </button>
-                    <button onClick={() => scrollToSection("testimonials")} className="text-gray-700 hover:text-blue-600 transition-colors font-medium cursor-pointer">
+                    </a>
+                    <a href="#testimonials" className="text-gray-700 hover:text-blue-600 transition-colors font-medium cursor-pointer">
                         Depoimentos
-                    </button>
-                    <button onClick={() => scrollToSection("contact")} className="text-gray-700 hover:text-blue-600 transition-colors font-medium cursor-pointer">
+                    </a>
+                    <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium cursor-pointer">
                         Contato
-                    </button>
-                    <button onClick={() => scrollToSection("cta")} className="bg-blue-600 p-2 px-4 rounded-[10px] hover:bg-blue-700 text-white font-semibold cursor-pointer">
+                    </a>
+                    <a href="#cta" className="bg-blue-600 p-2 px-4 rounded-[10px] hover:bg-blue-700 text-white font-semibold cursor-pointer">
                         Agendar Agora
-                    </button>
+                    </a>
                 </nav>
                 <button className="md:hidden p-2 -mr-2" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
                     {isMenuOpen ? (
