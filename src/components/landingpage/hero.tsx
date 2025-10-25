@@ -1,6 +1,13 @@
 import { FaArrowRight, FaWhatsapp } from "react-icons/fa"
 import { GoZap } from "react-icons/go"
 
+import Image from "next/image"
+import barber from '../../_imgs/barber.png'
+import barbershop from '../../_imgs/barbershop.png'
+import calendar from '../../_imgs/calendar.png'
+import hand from '../../_imgs/hand.png'
+
+
 export default function Hero() {
     return (
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-amber-50">
@@ -29,26 +36,31 @@ export default function Hero() {
                                 ">
                                 Começar Teste Grátis <FaArrowRight className="w-3 h-3" />
                             </button>
-                            <div className="relative flex justify-center items-center">
-                                <div className="absolute bg-black w-[105%] bg-gray-300 h-[65px] animate-pulse rounded-[10px]"></div>
-                                <button className="relative bg-white text-base sm:text-lg px-5 py-3 rounded-[10px] h-auto border-2 border-gray-300 hover:border-blue-600 font-semibold cursor-pointer">
-                                    Agendar Demonstação
-                                </button>
-                            </div>
+                            <button className="relative bg-white text-base sm:text-lg px-5 py-3 rounded-[10px] h-auto border-2 border-gray-300 hover:border-blue-600 font-semibold cursor-pointer shadow-lg">
+                                Agendar Demonstação
+                            </button>
                         </div>
 
-                        <div className="flex items-start gap-6 sm:gap-8 pt-8 border-t border-gray-200">
-                            <div className="flex-1">
-                                <p className="text-2xl sm:text-3xl font-bold text-gray-900">500+</p>
-                                <p className="text-sm text-gray-600">Barbearias Ativas</p>
+                        <div className="flex justify-center sm:justify-start items-start flex-wrap gap-4 sm:gap-6 pt-8 border-t border-gray-200">
+                            <div className=" w-[130px] flex flex-col items-center">
+                                <Image className="w-[50px]" src={calendar} alt=""/>
+                                <p className="text-2xl sm:text-2xl font-bold text-gray-900">+10mil</p>
+                                <p className="text-sm text-gray-600">Agendamentos</p>
                             </div>
-                            <div className="flex-1">
-                                <p className="text-2xl sm:text-3xl font-bold text-gray-900">4.9★</p>
-                                <p className="text-sm text-gray-600">Avaliação Média</p>
+                            <div className=" w-[130px] flex flex-col items-center">
+                                <Image className="w-[50px]" src={hand} alt=""/>
+                                <p className="text-2xl sm:text-2xl font-bold text-gray-900">+20mil</p>
+                                <p className="text-sm text-gray-600">Cadastros</p>
                             </div>
-                            <div className="flex-1">
-                                <p className="text-2xl sm:text-3xl font-bold text-gray-900">98%</p>
-                                <p className="text-sm text-gray-600">Satisfação</p>
+                            <div className=" w-[130px] flex flex-col items-center">
+                                <Image className="w-[50px]" src={barbershop} alt=""/>
+                                <p className="text-2xl sm:text-2xl font-bold text-gray-900">+600</p>
+                                <p className="text-sm text-gray-600">Barbearias</p>
+                            </div>
+                            <div className=" w-[130px] flex flex-col items-center">
+                                <Image className="w-[50px]" src={barber} alt=""/>
+                                <p className="text-2xl sm:text-2xl font-bold text-gray-900">+2mil</p>
+                                <p className="text-sm text-gray-600">Profissionais</p>
                             </div>
                         </div>
                     </div>
