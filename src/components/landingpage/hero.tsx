@@ -42,22 +42,22 @@ export default function Hero() {
                         </div>
 
                         <div className="flex justify-center sm:justify-start items-start flex-wrap gap-4 sm:gap-6 pt-8 border-t border-gray-200">
-                            <div className=" w-[130px] flex flex-col">
+                            <div className=" w-[130px] flex flex-col items-center sm:items-start">
                                 <Image className="w-[50px]" src={calendar} alt=""/>
                                 <p className="text-2xl sm:text-2xl font-bold text-gray-900">10mil+</p>
                                 <p className="text-sm text-gray-600">Agendamentos</p>
                             </div>
-                            <div className=" w-[130px] flex flex-col">
+                            <div className=" w-[130px] flex flex-col items-center sm:items-start">
                                 <Image className="w-[50px]" src={hand} alt=""/>
                                 <p className="text-2xl sm:text-2xl font-bold text-gray-900">20mil+</p>
                                 <p className="text-sm text-gray-600">Cadastros</p>
                             </div>
-                            <div className=" w-[130px] flex flex-col">
+                            <div className=" w-[130px] flex flex-col items-center sm:items-start">
                                 <Image className="w-[50px]" src={barbershop} alt=""/>
                                 <p className="text-2xl sm:text-2xl font-bold text-gray-900">600+</p>
                                 <p className="text-sm text-gray-600">Barbearias</p>
                             </div>
-                            <div className=" w-[130px] flex flex-col">
+                            <div className=" w-[130px] flex flex-col items-center sm:items-start">
                                 <Image className="w-[50px]" src={barber} alt=""/>
                                 <p className="text-2xl sm:text-2xl font-bold text-gray-900">2mil+</p>
                                 <p className="text-sm text-gray-600">Profissionais</p>
