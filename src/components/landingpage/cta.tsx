@@ -1,7 +1,8 @@
 'use client'
 import { motion } from 'framer-motion'
 import { FaArrowRight } from "react-icons/fa"
-import { IoCheckmarkDoneSharp } from "react-icons/io5"
+import { IoCheckmarkDoneSharp, IoLockClosedSharp, IoShieldCheckmarkSharp } from "react-icons/io5"
+import { BsLightningChargeFill } from "react-icons/bs"
 import { useState } from "react"
 
 export default function Cta() {
@@ -127,16 +128,16 @@ export default function Cta() {
                     </form>
 
                     <div className="mt-8 pt-8 border-t border-gray-200 flex items-center justify-center gap-4">
-                        <div className="text-center">
-                            <p className="text-2xl font-bold text-blue-600">✓</p>
+                        <div className="text-center flex flex-col items-center">
+                            <IoShieldCheckmarkSharp className='text-2xl font-bold text-green-600'/>
                             <p className="text-xs text-gray-600">Seguro</p>
                         </div>
-                        <div className="text-center">
-                            <p className="text-2xl font-bold text-blue-600">🔒</p>
+                        <div className="text-center flex flex-col items-center">
+                            <IoLockClosedSharp className='text-2xl font-bold text-blue-600'/>
                             <p className="text-xs text-gray-600">Criptografado</p>
                         </div>
-                        <div className="text-center">
-                            <p className="text-2xl font-bold text-blue-600">⚡</p>
+                        <div className="text-center flex flex-col items-center">
+                            <BsLightningChargeFill className='text-2xl font-bold text-yellow-500'/>
                             <p className="text-xs text-gray-600">Rápido</p>
                         </div>
                     </div>
