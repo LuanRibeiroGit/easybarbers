@@ -16,7 +16,7 @@ export default function Header() {
         <header className="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-2 flex-shrink-0">
-                    <span className="text-xl font-bold text-gray-900">EASY</span>
+                    <span className="text-xl font-bold text-gray-900">EASY BARBERS</span>
                 </div>
 
                 <nav className="hidden md:flex items-center gap-6 lg:gap-8">
