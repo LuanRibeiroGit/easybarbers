@@ -1,3 +1,4 @@
+'use client'
 import { FaArrowRight, FaWhatsapp } from "react-icons/fa"
 import { GoZap } from "react-icons/go"
 
@@ -7,11 +8,17 @@ import barbershop from '../../_imgs/barbershop.png'
 import calendar from '../../_imgs/calendar.png'
 import hand from '../../_imgs/hand.png'
 
+import { motion } from 'framer-motion'
 
 export default function Hero() {
     return (
         <section id="hero" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-amber-50">
             <div className="max-w-7xl mx-auto">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
                 <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div className="space-y-6">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-full">
@@ -86,16 +93,23 @@ export default function Hero() {
                                                 client: "Pedro Costa",
                                                 service: "Corte + Barba",
                                             },
-                                        ].map((appointment, i) => (
-                                        <div key={i} className="flex items-center justify-between bg-white rounded-lg p-3" >
-                                            <div>
-                                                <p className="font-semibold text-gray-900">{appointment.time}</p>
-                                                <p className="text-xs text-gray-600">{appointment.client}</p>
+                                        ].map((appointment, index) => (
+                                        <motion.div
+                                            key={index}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                                            viewport={{ once: true }}>
+                                            <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3" >
+                                                <div>
+                                                    <p className="font-semibold text-gray-900">{appointment.time}</p>
+                                                    <p className="text-xs text-gray-600">{appointment.client}</p>
+                                                </div>
+                                                <span className="text-xs bg-blue-200 text-blue-800 px-3 py-1 rounded-full font-medium">
+                                                    {appointment.service}
+                                                </span>
                                             </div>
-                                            <span className="text-xs bg-blue-200 text-blue-800 px-3 py-1 rounded-full font-medium">
-                                                {appointment.service}
-                                            </span>
-                                        </div>
+                                            </motion.div>
                                         ))}
                                     </div>
                                 </div>
@@ -115,6 +129,7 @@ export default function Hero() {
                         </div>
                     </div>
                 </div>
+            </motion.div>
             </div>
         </section>
     )

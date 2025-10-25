@@ -1,3 +1,5 @@
+'use client'
+import { motion } from 'framer-motion'
 import { IoCalendarClearOutline } from "react-icons/io5";
 import { FiUsers, FiSmartphone, FiClock } from "react-icons/fi"
 import { IoMdTrendingUp } from "react-icons/io"
@@ -46,6 +48,12 @@ export default function Benefits() {
     return (
         <section id="benefits" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                >
                 <div className="text-center mb-12 sm:mb-16">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                         Por que escolher a <span className="text-blue-600">EASY BARBERS</span> ?
@@ -58,19 +66,28 @@ export default function Benefits() {
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     {benefits.map((benefit, index) => {
+                        
                         const Icon = benefit.icon
                         return (
-                            <div key={index} className="p-8 border rounded-[15px] flex flex-col gap-4 shadow-sm hover:shadow-lg transition-all duration-300 border-gray-200 hover:border-blue-300 group">
+                            <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                            >
+                            <div className="p-8 border rounded-[15px] flex flex-col gap-4 shadow-sm hover:shadow-lg transition-all duration-300 border-gray-200 hover:border-blue-300 group">
                                 <div className="mb-4 w-full inline-flex p-3 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors">
-                                    <Icon className="w-6 h-6 text-blue-600" />
+                                <Icon className="w-6 h-6 text-blue-600" />
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                                    {benefit.title}
+                                {benefit.title}
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    {benefit.description}
+                                {benefit.description}
                                 </p>
                             </div>
+                            </motion.div>
                         )
                     })}
                 </div>
@@ -84,6 +101,7 @@ export default function Benefits() {
                         satisfação dos clientes.
                     </p>
                 </div>
+                </motion.div>
             </div>
         </section>
     )
