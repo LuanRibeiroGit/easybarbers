@@ -3,18 +3,13 @@ import api from "../../../axios/axios"
 
 
 
-export const createCta = async () =>{
-    const object = {
-        name: "luan",
-        email: "luancoxaaa2a009@gmail.com",
-        barber: "easy",
-        phone: "+5541996447961" 
-    }
+export const createCta = async (name: string, email: string, barber: string, phone: string) =>{
+    const data = { name, email, barber, phone }
     try {
-        return await api.post("/cta/form", object)
+        return await api.post("/cta/form", data)
     } catch (err: unknown) {
         if (axios.isAxiosError(err)) {
-            console.error("Erro na criação do Cta:", err.response?.data || err.message)
+            throw err.response?.data || { message: err.message }
         } else {
             console.error("Erro desconhecido:", err)
         }

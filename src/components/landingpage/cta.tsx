@@ -8,14 +8,20 @@ import { useState } from "react"
 import { createCta } from './api/cta'
 
 export default function Cta() {
+    const [name, setName] = useState("")
     const [email, setEmail] = useState("")
+    const [barber, setBarber] = useState("")
+    const [phone, setPhone] = useState("")
     const [submitted, setSubmitted] = useState(false)
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        
-        const create = await createCta()
-        if(create) setSubmitted(true)
+        try {
+            await createCta(name, email, barber, phone)
+            setSubmitted(true)
+        } catch (err: any){
+            alert(err.message)
+        }
     }
 
     const features = [
@@ -90,7 +96,7 @@ export default function Cta() {
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-2">Seu Nome</label>
-                                    <input type="text" placeholder="João Silva" className="w-full py-2 px-3 rounded-[10px] focus:outline-none focus:shadow-[0_0_5px_#3b82f6] focus:border-blue-300 border border-gray-200 shadow-sm" required />
+                                    <input type="text" placeholder="João Silva" value={name} onChange={(e) => setName(e.target.value)} className="w-full py-2 px-3 rounded-[10px] focus:outline-none focus:shadow-[0_0_5px_#3b82f6] focus:border-blue-300 border border-gray-200 shadow-sm" required />
                                 </div>
 
                                 <div>
@@ -100,12 +106,12 @@ export default function Cta() {
 
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-2">Nome da Barbearia</label>
-                                    <input type="text" placeholder="Barbearia Exemplo" className="w-full py-2 px-3 rounded-[10px] focus:outline-none focus:shadow-[0_0_5px_#3b82f6] focus:border-blue-300 border border-gray-200 shadow-sm" required />
+                                    <input type="text" placeholder="Barbearia Exemplo" value={barber} onChange={(e) => setBarber(e.target.value)} className="w-full py-2 px-3 rounded-[10px] focus:outline-none focus:shadow-[0_0_5px_#3b82f6] focus:border-blue-300 border border-gray-200 shadow-sm" required />
                                 </div>
 
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-2">Telefone</label>
-                                    <input type="tel" placeholder="(11) 99999-9999" className="w-full py-2 px-3 rounded-[10px] focus:outline-none focus:shadow-[0_0_5px_#3b82f6] focus:border-blue-300 border border-gray-200 shadow-sm" required />
+                                    <input type="tel" placeholder="(11) 99999-9999" value={phone} onChange={(e) => setPhone(e.target.value)} className="w-full py-2 px-3 rounded-[10px] focus:outline-none focus:shadow-[0_0_5px_#3b82f6] focus:border-blue-300 border border-gray-200 shadow-sm" required />
                                 </div>
 
                                 <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white text-lg py-6 h-auto flex items-center justify-center gap-2 font-semibold rounded-[10px]">
