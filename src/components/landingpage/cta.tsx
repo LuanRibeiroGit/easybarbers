@@ -5,17 +5,17 @@ import { IoCheckmarkDoneSharp, IoLockClosedSharp, IoShieldCheckmarkSharp } from 
 import { BsLightningChargeFill } from "react-icons/bs"
 import { useState } from "react"
 
+import { createCta } from './api/cta'
+
 export default function Cta() {
     const [email, setEmail] = useState("")
     const [submitted, setSubmitted] = useState(false)
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        if (email) {
-        setSubmitted(true)
-        setEmail("")
-        setTimeout(() => setSubmitted(false), 3000)
-        }
+        
+        const create = await createCta()
+        if(create) setSubmitted(true)
     }
 
     const features = [
